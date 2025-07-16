@@ -133,7 +133,3 @@ const timeUntilEvent = new htd(now.getTime(), futureEvent.getTime());
 const timeLeft = timeUntilEvent.getHumanReadable();
 console.log(`Time until event: ${timeLeft.years} years, ${timeLeft.days} days, ${timeLeft.minutes} minutes, ${timeLeft.seconds} seconds`);
 ```
-
-## License
-
-This project is private and not intended for public distribution.
