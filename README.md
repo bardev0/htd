@@ -2,19 +2,6 @@
 
 A TypeScript utility for calculating and formatting time differences between two timestamps in a human-readable format.
 
-## Installation
-
-```bash
-# Using bun
-bun install htd
-
-# Using npm
-npm install htd
-
-# Using yarn
-yarn add htd
-```
-
 ## Usage
 
 ```typescript
