@@ -1,12 +1,19 @@
 {
   "name": "htd",
   "module": "index.ts",
+  "main": "./dist/index.js",
+  "files": ["dist"],
+  "version": "1.0.1",
   "type": "module",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
-  }
+  },
+  "scripts": {
+    "build": "bun build index.ts --outdir ./dist && bun run tsc --emitDeclarationOnly"
+  },
+  "types": "./dist/index.d.ts"
 }
