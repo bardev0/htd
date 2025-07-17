@@ -3,9 +3,5 @@
     "declaration": true, // Generate .d.ts declaration files
     "emitDeclarationOnly": true, // Only emit .d.ts files (useful for separating builds)
     "outDir": "./dist", // Specify output directory for the declarations
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "esModuleInterop": true
   }
 }
