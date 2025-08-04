@@ -5,16 +5,20 @@
   "files": [
     "dist"
   ],
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "scripts": {
-    "build": "bun build index.ts --outdir ./dist && bun run tsc --emitDeclarationOnly"
+    "build": "bun build index.ts --outdir ./dist && bun run tsc --emitDeclarationOnly",
+    "test": "jest"
   },
   "types": "./dist/index.d.ts"
 }

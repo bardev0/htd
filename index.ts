@@ -16,6 +16,19 @@ export class htd {
     }
   }
 
+  getHoursAndMins() : {
+    hours: number,
+    minutes: number
+  } {
+    const time = this.assumeFormat(this.time);
+    const hours = Math.floor(time / 3600000);
+    const minutes = Math.floor(time / 60000) - hours * 60;
+    return {
+      hours: hours,
+      minutes: minutes
+    }
+  }
+
   getHumanReadable(): { years: number; days: number; hours: number, minutes: number; seconds: number; milliseconds: number } {
 
     const time = this.assumeFormat(this.time);
@@ -49,3 +62,5 @@ export class htd {
     };
   }
 }
+
+// create test to check if math is mathing
