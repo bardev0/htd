@@ -2,6 +2,11 @@
 
 A TypeScript utility for calculating and formatting time differences between two timestamps in a human-readable format.
 
+## Publish
+```
+bun run build
+npm publish
+```
 ## Usage
 
 ```typescript

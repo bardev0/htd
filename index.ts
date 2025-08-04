@@ -16,7 +16,7 @@ export class htd {
     }
   }
 
-  getHumanReadable(): { years: number; days: number; minutes: number; seconds: number; milliseconds: number } {
+  getHumanReadable(): { years: number; days: number; hours: number, minutes: number; seconds: number; milliseconds: number } {
 
     const time = this.assumeFormat(this.time);
 
@@ -28,7 +28,11 @@ export class htd {
     const daysRemainder = days * 86400000;
     const msAfterDays = msAfterYears - daysRemainder;
 
-    const minutes = Math.floor(msAfterDays / 60000);
+    const hours = Math.floor(msAfterDays / 3600000);
+    const hoursRemainder = hours * 3600000;
+    const msAfterHours = msAfterDays - hoursRemainder;
+
+    const minutes = Math.floor(msAfterHours / 60000);
     const minutesRemainder = minutes * 60000;
     const msAfterMinutes = msAfterDays - minutesRemainder;
 
@@ -38,6 +42,7 @@ export class htd {
     return {
       years: years,
       days: days,
+      hours: hours,
       minutes: minutes,
       seconds: secs,
       milliseconds: ms,
